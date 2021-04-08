@@ -12,6 +12,11 @@
         "guzzlehttp/guzzle": "6.*",
         "moneyphp/money": "^3.2"
     },
+    "repositories":[
+    {
+        "type":"git",
+        "url":"https://github.com/babiypetr/skrill-php-client"
+    }],
     "require-dev": {
         "infection/infection": "^0.15.3",
         "squizlabs/php_codesniffer": "^3.5",
