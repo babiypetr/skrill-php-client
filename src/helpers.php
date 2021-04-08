@@ -21,3 +21,13 @@ if (!function_exists('getSkillSupportsLanguages')) {
         return include __DIR__ . '/../resources/iso-6391-languages-skrill-supports.php';
     }
 }
+
+if (!function_exists('getSkillSupportsPaymentMethods')) {
+    /**
+     * @return array
+     */
+    function getSkillSupportsPaymentMethods(): array
+    {
+        return include __DIR__ . '/../resources/skrill-payment-methods-support.php';
+    }
+}

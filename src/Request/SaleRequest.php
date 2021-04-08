@@ -10,6 +10,7 @@ use Skrill\ValueObject\Email;
 use Skrill\ValueObject\Language;
 use Skrill\ValueObject\Description;
 use Skrill\ValueObject\TransactionID;
+use Skrill\ValueObject\PaymentMethod;
 use Skrill\Request\Traits\GetPayloadTrait;
 use Skrill\ValueObject\RecurringBillingNote;
 use Skrill\Request\Traits\AmountFormatterTrait;
@@ -43,6 +44,17 @@ final class SaleRequest
     public function setLang(Language $lang): self
     {
         $this->payload['language'] = strval($lang);
+
+        return $this;
+    }
+
+    /**
+     * @param PaymentMethod $method
+     * @return $this
+     */
+    public function setPaymentMethod(PaymentMethod $method): self
+    {
+        $this->payload['payment_methods'] = strval($method);
 
         return $this;
     }
