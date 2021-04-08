@@ -13,10 +13,26 @@
         "moneyphp/money": "^3.2"
     },
     "repositories":[
-    {
-        "type":"git",
-        "url":"https://github.com/babiypetr/skrill-php-client"
-    }],
+        {
+            "type":"git",
+            "url":"https://github.com/babiypetr/skrill-php-client"
+        },
+        {
+            "type":"package",
+            "package":{
+                "name":"babiypetr/skrill-php-client",
+                "version":"0.0.71",
+                "source":{
+                    "type":"git",
+                    "url":"https://github.com/babiypetr/skrill-php-client",
+                    "reference":"master"
+                },
+                "autoload":{
+                    "files":["src/helpers.php"]
+                }
+            }
+        }
+    ],
     "require-dev": {
         "infection/infection": "^0.15.3",
         "squizlabs/php_codesniffer": "^3.5",
